@@ -1,0 +1,706 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17522A8E28940B7D00C69C24 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A8D28940B7D00C69C24 /* Tests_iOS.swift */; };
+		17522A9028940B7D00C69C24 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A8F28940B7D00C69C24 /* Tests_iOSLaunchTests.swift */; };
+		17522A9A28940B7D00C69C24 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A9928940B7D00C69C24 /* Tests_macOS.swift */; };
+		17522A9C28940B7D00C69C24 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A9B28940B7D00C69C24 /* Tests_macOSLaunchTests.swift */; };
+		17522A9D28940B7D00C69C24 /* SoongfiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A7528940B7B00C69C24 /* SoongfiApp.swift */; };
+		17522A9E28940B7D00C69C24 /* SoongfiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A7528940B7B00C69C24 /* SoongfiApp.swift */; };
+		17522A9F28940B7D00C69C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A7628940B7B00C69C24 /* ContentView.swift */; };
+		17522AA028940B7D00C69C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A7628940B7B00C69C24 /* ContentView.swift */; };
+		17522AA128940B7D00C69C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17522A7728940B7D00C69C24 /* Assets.xcassets */; };
+		17522AA228940B7D00C69C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17522A7728940B7D00C69C24 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17522A8A28940B7D00C69C24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17522A7028940B7B00C69C24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17522A7B28940B7D00C69C24;
+			remoteInfo = "Soongfi (iOS)";
+		};
+		17522A9628940B7D00C69C24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17522A7028940B7B00C69C24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17522A8128940B7D00C69C24;
+			remoteInfo = "Soongfi (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17522A7528940B7B00C69C24 /* SoongfiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoongfiApp.swift; sourceTree = "<group>"; };
+		17522A7628940B7B00C69C24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		17522A7728940B7D00C69C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17522A7C28940B7D00C69C24 /* Soongfi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soongfi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17522A8228940B7D00C69C24 /* Soongfi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soongfi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17522A8428940B7D00C69C24 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		17522A8928940B7D00C69C24 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17522A8D28940B7D00C69C24 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		17522A8F28940B7D00C69C24 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		17522A9528940B7D00C69C24 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17522A9928940B7D00C69C24 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		17522A9B28940B7D00C69C24 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17522A7928940B7D00C69C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17522A7F28940B7D00C69C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17522A8628940B7D00C69C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17522A9228940B7D00C69C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17522A6F28940B7B00C69C24 = {
+			isa = PBXGroup;
+			children = (
+				17522A7428940B7B00C69C24 /* Shared */,
+				17522A8328940B7D00C69C24 /* macOS */,
+				17522A8C28940B7D00C69C24 /* Tests iOS */,
+				17522A9828940B7D00C69C24 /* Tests macOS */,
+				17522A7D28940B7D00C69C24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17522A7428940B7B00C69C24 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				17522A7528940B7B00C69C24 /* SoongfiApp.swift */,
+				17522A7628940B7B00C69C24 /* ContentView.swift */,
+				17522A7728940B7D00C69C24 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		17522A7D28940B7D00C69C24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17522A7C28940B7D00C69C24 /* Soongfi.app */,
+				17522A8228940B7D00C69C24 /* Soongfi.app */,
+				17522A8928940B7D00C69C24 /* Tests iOS.xctest */,
+				17522A9528940B7D00C69C24 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17522A8328940B7D00C69C24 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				17522A8428940B7D00C69C24 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		17522A8C28940B7D00C69C24 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				17522A8D28940B7D00C69C24 /* Tests_iOS.swift */,
+				17522A8F28940B7D00C69C24 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		17522A9828940B7D00C69C24 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				17522A9928940B7D00C69C24 /* Tests_macOS.swift */,
+				17522A9B28940B7D00C69C24 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17522A7B28940B7D00C69C24 /* Soongfi (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17522AA528940B7D00C69C24 /* Build configuration list for PBXNativeTarget "Soongfi (iOS)" */;
+			buildPhases = (
+				17522A7828940B7D00C69C24 /* Sources */,
+				17522A7928940B7D00C69C24 /* Frameworks */,
+				17522A7A28940B7D00C69C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Soongfi (iOS)";
+			productName = "Soongfi (iOS)";
+			productReference = 17522A7C28940B7D00C69C24 /* Soongfi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17522A8128940B7D00C69C24 /* Soongfi (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17522AA828940B7D00C69C24 /* Build configuration list for PBXNativeTarget "Soongfi (macOS)" */;
+			buildPhases = (
+				17522A7E28940B7D00C69C24 /* Sources */,
+				17522A7F28940B7D00C69C24 /* Frameworks */,
+				17522A8028940B7D00C69C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Soongfi (macOS)";
+			productName = "Soongfi (macOS)";
+			productReference = 17522A8228940B7D00C69C24 /* Soongfi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17522A8828940B7D00C69C24 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17522AAB28940B7D00C69C24 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				17522A8528940B7D00C69C24 /* Sources */,
+				17522A8628940B7D00C69C24 /* Frameworks */,
+				17522A8728940B7D00C69C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17522A8B28940B7D00C69C24 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 17522A8928940B7D00C69C24 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		17522A9428940B7D00C69C24 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17522AAE28940B7D00C69C24 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				17522A9128940B7D00C69C24 /* Sources */,
+				17522A9228940B7D00C69C24 /* Frameworks */,
+				17522A9328940B7D00C69C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17522A9728940B7D00C69C24 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 17522A9528940B7D00C69C24 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17522A7028940B7B00C69C24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					17522A7B28940B7D00C69C24 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					17522A8128940B7D00C69C24 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					17522A8828940B7D00C69C24 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 17522A7B28940B7D00C69C24;
+					};
+					17522A9428940B7D00C69C24 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 17522A8128940B7D00C69C24;
+					};
+				};
+			};
+			buildConfigurationList = 17522A7328940B7B00C69C24 /* Build configuration list for PBXProject "Soongfi" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17522A6F28940B7B00C69C24;
+			productRefGroup = 17522A7D28940B7D00C69C24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17522A7B28940B7D00C69C24 /* Soongfi (iOS) */,
+				17522A8128940B7D00C69C24 /* Soongfi (macOS) */,
+				17522A8828940B7D00C69C24 /* Tests iOS */,
+				17522A9428940B7D00C69C24 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17522A7A28940B7D00C69C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17522AA128940B7D00C69C24 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17522A8028940B7D00C69C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17522AA228940B7D00C69C24 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17522A8728940B7D00C69C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17522A9328940B7D00C69C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17522A7828940B7D00C69C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17522A9F28940B7D00C69C24 /* ContentView.swift in Sources */,
+				17522A9D28940B7D00C69C24 /* SoongfiApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17522A7E28940B7D00C69C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17522AA028940B7D00C69C24 /* ContentView.swift in Sources */,
+				17522A9E28940B7D00C69C24 /* SoongfiApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17522A8528940B7D00C69C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17522A9028940B7D00C69C24 /* Tests_iOSLaunchTests.swift in Sources */,
+				17522A8E28940B7D00C69C24 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17522A9128940B7D00C69C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17522A9C28940B7D00C69C24 /* Tests_macOSLaunchTests.swift in Sources */,
+				17522A9A28940B7D00C69C24 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17522A8B28940B7D00C69C24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17522A7B28940B7D00C69C24 /* Soongfi (iOS) */;
+			targetProxy = 17522A8A28940B7D00C69C24 /* PBXContainerItemProxy */;
+		};
+		17522A9728940B7D00C69C24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17522A8128940B7D00C69C24 /* Soongfi (macOS) */;
+			targetProxy = 17522A9628940B7D00C69C24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		17522AA328940B7D00C69C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17522AA428940B7D00C69C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		17522AA628940B7D00C69C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6VNBMHBRN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanarotg.Soongfi;
+				PRODUCT_NAME = Soongfi;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17522AA728940B7D00C69C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6VNBMHBRN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanarotg.Soongfi;
+				PRODUCT_NAME = Soongfi;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17522AA928940B7D00C69C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6VNBMHBRN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanarotg.Soongfi;
+				PRODUCT_NAME = Soongfi;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		17522AAA28940B7D00C69C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6VNBMHBRN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanarotg.Soongfi;
+				PRODUCT_NAME = Soongfi;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		17522AAC28940B7D00C69C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6VNBMHBRN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanarotg.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Soongfi (iOS)";
+			};
+			name = Debug;
+		};
+		17522AAD28940B7D00C69C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6VNBMHBRN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanarotg.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Soongfi (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17522AAF28940B7D00C69C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6VNBMHBRN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanarotg.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Soongfi (macOS)";
+			};
+			name = Debug;
+		};
+		17522AB028940B7D00C69C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6VNBMHBRN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hanarotg.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Soongfi (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17522A7328940B7B00C69C24 /* Build configuration list for PBXProject "Soongfi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17522AA328940B7D00C69C24 /* Debug */,
+				17522AA428940B7D00C69C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17522AA528940B7D00C69C24 /* Build configuration list for PBXNativeTarget "Soongfi (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17522AA628940B7D00C69C24 /* Debug */,
+				17522AA728940B7D00C69C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17522AA828940B7D00C69C24 /* Build configuration list for PBXNativeTarget "Soongfi (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17522AA928940B7D00C69C24 /* Debug */,
+				17522AAA28940B7D00C69C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17522AAB28940B7D00C69C24 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17522AAC28940B7D00C69C24 /* Debug */,
+				17522AAD28940B7D00C69C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17522AAE28940B7D00C69C24 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17522AAF28940B7D00C69C24 /* Debug */,
+				17522AB028940B7D00C69C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17522A7028940B7B00C69C24 /* Project object */;
+}
