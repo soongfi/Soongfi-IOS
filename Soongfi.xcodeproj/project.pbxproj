@@ -40,7 +40,7 @@
 		17522A7528940B7B00C69C24 /* SoongfiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoongfiApp.swift; sourceTree = "<group>"; };
 		17522A7628940B7B00C69C24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17522A7728940B7D00C69C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		17522A7C28940B7D00C69C24 /* Soongfi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soongfi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17522A7C28940B7D00C69C24 /* 숭파이.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "숭파이.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17522A8228940B7D00C69C24 /* Soongfi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soongfi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17522A8428940B7D00C69C24 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		17522A8928940B7D00C69C24 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +107,7 @@
 		17522A7D28940B7D00C69C24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				17522A7C28940B7D00C69C24 /* Soongfi.app */,
+				17522A7C28940B7D00C69C24 /* 숭파이.app */,
 				17522A8228940B7D00C69C24 /* Soongfi.app */,
 				17522A8928940B7D00C69C24 /* Tests iOS.xctest */,
 				17522A9528940B7D00C69C24 /* Tests macOS.xctest */,
@@ -158,7 +158,7 @@
 			);
 			name = "Soongfi (iOS)";
 			productName = "Soongfi (iOS)";
-			productReference = 17522A7C28940B7D00C69C24 /* Soongfi.app */;
+			productReference = 17522A7C28940B7D00C69C24 /* 숭파이.app */;
 			productType = "com.apple.product-type.application";
 		};
 		17522A8128940B7D00C69C24 /* Soongfi (macOS) */ = {
@@ -478,7 +478,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hanarotg.Soongfi;
-				PRODUCT_NAME = Soongfi;
+				PRODUCT_NAME = "숭파이";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -508,7 +508,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hanarotg.Soongfi;
-				PRODUCT_NAME = Soongfi;
+				PRODUCT_NAME = "숭파이";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
