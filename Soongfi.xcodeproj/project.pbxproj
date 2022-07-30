@@ -17,6 +17,7 @@
 		17522AA028940B7D00C69C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A7628940B7B00C69C24 /* ContentView.swift */; };
 		17522AA128940B7D00C69C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17522A7728940B7D00C69C24 /* Assets.xcassets */; };
 		17522AA228940B7D00C69C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17522A7728940B7D00C69C24 /* Assets.xcassets */; };
+		17522AB42894EAF700C69C24 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17522AB32894EAF700C69C24 /* NetworkExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		17522A9528940B7D00C69C24 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17522A9928940B7D00C69C24 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		17522A9B28940B7D00C69C24 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		17522AB12894E7F500C69C24 /* Soongfi (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Soongfi (iOS).entitlements"; sourceTree = "<group>"; };
+		17522AB32894EAF700C69C24 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/System/Library/Frameworks/NetworkExtension.framework; sourceTree = DEVELOPER_DIR; };
+		17522AB528954C6900C69C24 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17522AB42894EAF700C69C24 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,11 +91,13 @@
 		17522A6F28940B7B00C69C24 = {
 			isa = PBXGroup;
 			children = (
+				17522AB12894E7F500C69C24 /* Soongfi (iOS).entitlements */,
 				17522A7428940B7B00C69C24 /* Shared */,
 				17522A8328940B7D00C69C24 /* macOS */,
 				17522A8C28940B7D00C69C24 /* Tests iOS */,
 				17522A9828940B7D00C69C24 /* Tests macOS */,
 				17522A7D28940B7D00C69C24 /* Products */,
+				17522AB22894EAF700C69C24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +146,15 @@
 				17522A9B28940B7D00C69C24 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		17522AB22894EAF700C69C24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17522AB528954C6900C69C24 /* WebKit.framework */,
+				17522AB32894EAF700C69C24 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Soongfi (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q6VNBMHBRN;
@@ -491,6 +508,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Soongfi (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q6VNBMHBRN;
