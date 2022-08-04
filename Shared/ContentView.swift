@@ -24,8 +24,8 @@ struct ContentView: View {
                                 VStack {
                                     Image("SoongfiLarge").resizable().scaledToFit()
                                     VStack(alignment: .leading ){
-                                        Text("숭파이 연결하기").font(.title).fontWeight(.bold)
-                                        Text("\n숭실대학교 교내 와이파이 연결 문제를 자동으로 진단하고 인터넷을 연결합니다.")
+                                        Text("숭파이 인터넷 연결하기").font(.title).fontWeight(.bold)
+                                        Text("\n숭실대학교 교내 와이파이 인터넷 연결 시도를 위해 로그인 화면 호출을 시도합니다.")
                                     }.padding()
                                 }
                                 NavigationLink(destination: WifiConnectView()){
@@ -36,7 +36,7 @@ struct ContentView: View {
                         
                         Section(header: Text("더보기")) {
                                 
-                            NavigationLink("앱 정보", destination: AppInfoView())
+                            NavigationLink("기타 정보", destination: AppInfoView())
                             }
                             
                         }.navigationTitle("숭파이")
@@ -65,7 +65,9 @@ struct SafariView: UIViewControllerRepresentable {
 
 struct WifiConnectView : View {
 
-    @State private var ipAddress : String = ""
+    @State private var loadingMessage : String = ""
+    
+    @State private var ipAddress : String = "11.11.11.11"
     @State private var macAddress : String = "00:00:00:00:00:00"
     
         @State private var showSafari = false
@@ -98,29 +100,81 @@ struct WifiConnectView : View {
     }
 
     func getInit() {
-          ipAddress = getIPAddress()
+        ipAddress = getIPAddress()
+        
+        let _ = print(ipAddress.count)
+        
+        if(ipAddress.count > 16){
+            loadingMessage = "[주의] 현재 교내 와이파이에 접속하지 않은 상태입니다. 로그인 후 숭실대학교 교내 와이파이(Soongsil_WIFI)에 접속해 주세요."
+            ipAddress = "22.22.22.22"
+            sleep(1)
+        }
+                
+        showSafari = true
+        
     }
     
    
     
     var body: some View {
+        ScrollView {
             VStack {
-                ProgressView()
-                Text("으악")
-                Text("IP주소를 확인하는 중 : \(ipAddress)")
-                Text("MAC주소를 확인하는 중 : \(macAddress)")
-                Text("http://auth.soongsil.ac.kr/login/login.do?ipaddress=" + ipAddress + "&macaddress=" + macAddress + "&vlantag=0220&sysid=0001&btype=014&scode=&fwurl=product.tdk.com/en/search/set_distributor?back_url=/en/catalog/datasheets/beads_commercial_power_mpz2")
-                Button(action: {
-                            showSafari = true
-                        }) {
-                            Text("로그인하기")
-                        }
-                        // summon the Safari sheet
-                        .sheet(isPresented: $showSafari) {
-                            SafariView(url:URL(string: "http://auth.soongsil.ac.kr/login/login.do?ipaddress=" + ipAddress + "&macaddress=" + macAddress + "&vlantag=0220&sysid=0001&btype=014&scode=&fwurl=product.tdk.com/en/search/set_distributor?back_url=/en/catalog/datasheets/beads_commercial_power_mpz2")!)
-                        }
-            }.onAppear{getInit()}
-    }
+                VStack {
+                    Image("Connected").resizable().scaledToFit()
+                    Text("연결되었습니다!").padding()
+                    Text("로그인 페이지가 나타나지 않는 경우 아래 숭파이 로그인 버튼을 누르세요.\n사용자 네트워크 환경에 따라 여러 번 로그인 해야 할 수도 있습니다.").font(.subheadline).foregroundColor(Color.gray)
+                    
+                    Button(action: {
+                                showSafari = true
+                            })
+                                {
+                                Text("숭파이 로그인")
+                            }
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .foregroundColor(.white)
+                                .background(Color.accentColor)
+                            .cornerRadius(8)
+                            // summon the Safari sheet
+                            .sheet(isPresented: $showSafari) {
+                                SafariView(url:URL(string: "http://auth.soongsil.ac.kr/login/login.do?ipaddress=" + ipAddress + "&macaddress=" + macAddress + "&vlantag=0220&sysid=0001&btype=014&scode=&fwurl=product.tdk.com/en/search/set_distributor?back_url=/en/catalog/datasheets/beads_commercial_power_mpz2")!)
+                            }
+                    
+                }.padding()
+               
+                
+                
+                VStack(alignment: .leading) {
+                    
+                    
+                    
+                    
+                    Text("도움말").font(.title)
+                    Text("와이파이 연결을 껐다가 다시 켜보세요.").font(.subheadline).foregroundColor(Color.gray)
+                    Button(action: {
+                       
+                        UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
+
+                            })
+                                {
+                                Text("설정 바로가기")
+                            }
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .foregroundColor(Color.accentColor)
+                                .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                }.padding()
+                
+            }
+            .onAppear{getInit()}
+        }
+        .padding()
+        .frame(maxWidth: .infinity)
+            
+    
+        }
+    
 }
 
 
@@ -128,16 +182,60 @@ struct AppInfoView: View {
     var body: some View {
         
         ScrollView {
-                Link("깃허브",
-                     destination: URL(string: "https://hanarotg.github.io")!)
-                Text("흐흫헤헤")
-            Button("깃허브") {}
-                .padding()
-                .frame(width: 100)
-                .background(Color(red: 0, green: 0, blue: 0.5))
-                .controlSize(.large)
-        }
+            VStack {
+               
+                VStack(alignment: .leading) {
+                    
+                    Text("후원하기").font(.title)
+                    Text("여러분의 소중한 지원 감사합니다.\n잘 쓰겠습니다.").foregroundColor(Color.gray)
+                    
+                    Link("💸 후원하기(토스익명송금)", destination: URL(string: "https://toss.me/googoogoo")!)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(Color.white)
+                        .background(Color.accentColor)
+                        .cornerRadius(8)
+                  
+                    
+                    }.padding()
+                    
+                
+            
+                
+                VStack(alignment: .leading) {
+                    Text("건의 및 버그 신고").font(.title)
+                    Text("아직 많은 점이 부족합니다.\n실제로 이용하실 때 불편함이나 건의할 사항 있으시다면\n언제든지 작성 부탁드립니다.").foregroundColor(Color.gray)
+                    
+                    Link("건의 및 버그 신고", destination: URL(string: "https://toss.me/googoogoo")!)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(Color.white)
+                        .background(Color.accentColor)
+                        .cornerRadius(8)
+                    }.padding()
+            
         
+                VStack(alignment: .leading) {
+                    Text("개발자 정보").font(.title)
+                    Text("안녕하세요.").foregroundColor(Color.gray)
+                    Link("깃허브",
+                         destination: URL(string: "https://github.com/hanarotg")!)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor(Color.accentColor)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(8)
+                    Link("개발자 블로그",
+                         destination: URL(string: "https://hanarotg.github.io")!)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor(Color.accentColor)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(8)
+                }.padding()
+            
+            }
+        }
     }
 }
                         
