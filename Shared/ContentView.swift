@@ -201,12 +201,12 @@ struct ConnectionHelpView: View {
                 Text("아래 가이드에 따라 가능한 여러 가지 방법을 시도해 보세요.\n").font(.subheadline).foregroundColor(Color.gray)
                 
                 VStack(alignment: .leading) {
-                    Text("로그인 호출에 실패하였습니다.").font(.title2)
+                    Text("로그인 페이지 호출 실패").font(.title2)
                     Text("'숭파이 로그인'시 로그인 창이 나오지 않고\n라는 문구가 나오면 아래 단계를 진행해주세요.").font(.subheadline).foregroundColor(Color.gray)
                     VStack(alignment: .leading) {
                         Text("1. Soongsil_WIFI 연결을 끊어주세요.")
                         Text("2. Soongsil_WIFI에 다시 연결해주세요.")
-                        Text("3. 아래 숭파이 재로그인 시도를 눌러주세요.")
+                        Text("3. 아래 라우터 접속 시도를 눌러주세요.")
                         Text("[주의] 반드시 Soongsil_WIFI에 연결된 상태에서 진행해주세요!")
                             .font(.subheadline).foregroundColor(Color.gray)
                         
@@ -214,7 +214,7 @@ struct ConnectionHelpView: View {
                             showSafari = true
                                 })
                                     {
-                                    Text("숭파이 재로그인 시도")
+                                    Text("숭파이 내부 라우터 접속 시도")
                                             .padding()
                                             .frame(maxWidth: .infinity)
                                             .foregroundColor(Color.accentColor)
