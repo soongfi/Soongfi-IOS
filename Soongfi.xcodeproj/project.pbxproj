@@ -16,9 +16,9 @@
 		17522A9D28940B7D00C69C24 /* SoongfiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A7528940B7B00C69C24 /* SoongfiApp.swift */; };
 		17522A9E28940B7D00C69C24 /* SoongfiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A7528940B7B00C69C24 /* SoongfiApp.swift */; };
 		17522A9F28940B7D00C69C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A7628940B7B00C69C24 /* ContentView.swift */; };
-		17522AA028940B7D00C69C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A7628940B7B00C69C24 /* ContentView.swift */; };
 		17522AA128940B7D00C69C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17522A7728940B7D00C69C24 /* Assets.xcassets */; };
 		17522AA228940B7D00C69C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17522A7728940B7D00C69C24 /* Assets.xcassets */; };
+		17ED232128A4CBA1009B82A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522A7628940B7B00C69C24 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -328,7 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17522AA028940B7D00C69C24 /* ContentView.swift in Sources */,
+				17ED232128A4CBA1009B82A0 /* ContentView.swift in Sources */,
 				17522A9E28940B7D00C69C24 /* SoongfiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,7 +503,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hanarotg.Soongfi;
 				PRODUCT_NAME = Soongfi;
 				SDKROOT = iphoneos;
@@ -536,7 +536,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hanarotg.Soongfi;
 				PRODUCT_NAME = Soongfi;
 				SDKROOT = iphoneos;

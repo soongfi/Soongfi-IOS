@@ -55,10 +55,11 @@ struct ContentView: View {
                             }
                             
                         }.navigationTitle("숭파이")
-            
-            
+
                     }
-        }
+            
+            WifiConnectView()
+        }.navigationViewStyle(DoubleColumnNavigationViewStyle())
         
     }
 }
@@ -128,7 +129,6 @@ struct WifiConnectView : View {
             loadingMessage = "[주의] 현재 교내 와이파이에 접속하지 않은 상태입니다. 로그인 후 숭실대학교 교내 와이파이(Soongsil_WIFI)에 접속해 주세요."
             ipAddress = "010.020.30.22"
         }
-                
         
         // uuid를 통해 가상 MAC주소 포멧을 생성
         let uuid = NSUUID().uuidString
@@ -317,31 +317,6 @@ struct AppInfoView: View {
         ScrollView {
             VStack {
                
-                VStack(alignment: .leading) {
-                    
-                    Text("후원하기").font(.title)
-                    Text("감사합니다. 잘 쓰겠습니다.").foregroundColor(Color.gray)
-                    
-                    Button(action: {
-                        if let url = URL(string: "https://toss.me/googoogoo"){
-                            openURL(url)
-                        }
-                    })
-                    {
-                        Text("💸 후원하기(토스익명송금)")
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .foregroundColor(Color.white)
-                            .background(Color.accentColor)
-                            .cornerRadius(8)
-                    }
-
-                    
-                    }.padding()
-                    
-                
-            
-                
                 VStack(alignment: .leading) {
                     Text("건의 및 버그 신고").font(.title)
                     
