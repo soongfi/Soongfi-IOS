@@ -93,6 +93,8 @@ struct ContentView: View {
     @State private var showHelp = false
     @State private var connection = false
     
+    @State private var shadowRadius: CGFloat = 0
+    
     @Environment(\.openURL) private var openURL
     
     var body: some View {
@@ -100,6 +102,26 @@ struct ContentView: View {
             
             VStack {
              
+                HStack {
+                    
+                    VStack(alignment: .leading) {
+                        Text("숭파이 beta")
+                            .foregroundColor(Color(.systemGray))
+                            .fontWeight(.bold)
+                    }
+                    
+                    // 도움말 버튼
+                    Button(action: { showHelp = true }){
+                        Image(systemName: "info.circle.fill")
+                            .imageScale(.large)
+                            .foregroundColor(Color(.systemGray3))
+                    }
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .sheet(isPresented: $showHelp) {
+                            ConnectionHelpView(showHelpView: $showHelp)
+                        }
+                }
+                
                 Spacer()
                 
                 // auth.soongsil.ac.kr 로그인 서버로 직접 접속을 시도합니다.
@@ -111,30 +133,33 @@ struct ContentView: View {
                     VStack(spacing: 0){
                         Image("SoongfiLarge")
                             .resizable()
-                            .frame(width: 192, height: 192)
-                        VStack {
-                            Text("숭파이 로그인")
-                                .foregroundColor(.white)
-                                .fontWeight(.bold)
-                                .padding()
-                        }
-                        .frame(width: 192)
-                        .background(Color.accentColor)
-                        
+                            .frame(width: 200, height: 200)
                     }
                 }
                 .sheet(isPresented: $showSafariSoongfiLogin) {
                     let URLtmp = getURL()
                     SafariView(url:URL(string : URLtmp)!)
                 }
-                .cornerRadius(16)
-                .shadow(radius: 4, y: 2)
+                
+                .cornerRadius(100)
+                .shadow(radius: shadowRadius, y: 2)
+                .onAppear{
+                    withAnimation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
+                        shadowRadius = 10
+                    }
+                }
                 
                 Spacer()
                 
-                // 인터넷이 연결되어 있는 경우
-                if connection == true {
-                    Text("인터넷에 연결되어 있는 것 같아요!").foregroundColor(.white)
+                VStack {
+                    Text("위 와이파이 버튼을 눌러\n숭실대학교 로그인 페이지 호출 시도해보세요.")
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color(.systemGray))
+                
+                    // 인터넷이 연결되어 있는 경우
+                    if connection == true {
+                        Text("인터넷에 연결되어 있는 것 같아요!").foregroundColor(.white)
+                    }
                 }
                 
             }
@@ -156,21 +181,6 @@ struct ContentView: View {
                 }
                 .sheet(isPresented: $showSafariRouterLogin) {
                     SafariView(url:URL(string: "http://192.168.0.1")!)
-                }
-                
-                Button(action: {
-                    showHelp = true
-                })
-                {
-                    Text("도움말")
-                        .padding()
-                        .frame(maxWidth: 536)
-                        .foregroundColor(Color.accentColor)
-                        .background(Color(.systemGray5))
-                        .cornerRadius(8)
-                }
-                .sheet(isPresented: $showHelp) {
-                    ConnectionHelpView(showHelpView: $showHelp)
                 }
                 
             }.frame(maxHeight: .infinity, alignment: .bottom)
