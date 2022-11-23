@@ -87,14 +87,14 @@ struct ContentView: View {
         
     }
 
-    
+    // 내장 Safari View 상태 관리 변수
     @State private var showSafariSoongfiLogin = false
     @State private var showSafariRouterLogin = false
+    
+    // 내장 뷰 상태 관리 변수
     @State private var showHelp = false
     @State private var connection = false
-    
-    @State private var shadowRadius: CGFloat = 0
-    
+        
     @Environment(\.openURL) private var openURL
     
     var body: some View {
@@ -105,7 +105,7 @@ struct ContentView: View {
                 HStack {
                     
                     VStack(alignment: .leading) {
-                        Text("숭파이 beta")
+                        Text("숭파이")
                             .foregroundColor(Color(.systemGray))
                             .fontWeight(.bold)
                     }
@@ -120,46 +120,44 @@ struct ContentView: View {
                         .sheet(isPresented: $showHelp) {
                             ConnectionHelpView(showHelpView: $showHelp)
                         }
-                }
-                
-                Spacer()
-                
-                // auth.soongsil.ac.kr 로그인 서버로 직접 접속을 시도합니다.
-                // ip 및 mac vtag 등의 접속 요건 파라미터를 랜덤으로 생성합니다.
-                Button(action: {
-                    showSafariSoongfiLogin = true
-                })
-                {
-                    VStack(spacing: 0){
-                        Image("SoongfiLarge")
-                            .resizable()
-                            .frame(width: 200, height: 200)
-                    }
-                }
-                .sheet(isPresented: $showSafariSoongfiLogin) {
-                    let URLtmp = getURL()
-                    SafariView(url:URL(string : URLtmp)!)
-                }
-                
-                .cornerRadius(100)
-                .shadow(radius: shadowRadius, y: 2)
-                .onAppear{
-                    withAnimation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                        shadowRadius = 10
-                    }
-                }
-                
-                Spacer()
+                }.frame(maxWidth: 536)
                 
                 VStack {
-                    Text("위 와이파이 버튼을 눌러\n숭실대학교 로그인 페이지 호출 시도해보세요.")
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color(.systemGray))
-                
-                    // 인터넷이 연결되어 있는 경우
-                    if connection == true {
-                        Text("인터넷에 연결되어 있는 것 같아요!").foregroundColor(.white)
+                    
+                    Spacer()
+
+                    // auth.soongsil.ac.kr 로그인 서버로 직접 접속을 시도합니다.
+                    // ip 및 mac vtag 등의 접속 요건 파라미터를 랜덤으로 생성합니다.
+                    Button(action: {
+                        showSafariSoongfiLogin = true
+                    })
+                    {
+                        VStack(spacing: 0){
+                            Image("SoongfiLarge")
+                                .resizable()
+                                .frame(width: 200, height: 200)
+                        }
                     }
+                    .sheet(isPresented: $showSafariSoongfiLogin) {
+                        let URLtmp = getURL()
+                        SafariView(url:URL(string : URLtmp)!)
+                    }
+                    .cornerRadius(100)
+                    .shadow(radius: 4, y: 2)
+                    
+                    Spacer()
+                    
+                    VStack {
+                        Text("위 와이파이 버튼을 눌러\n숭실대학교 로그인 페이지 호출 시도해보세요.")
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color(.systemGray))
+                        
+                        // 인터넷이 연결되어 있는 경우
+                        if connection == true {
+                            Text("인터넷에 연결되어 있는 것 같아요!").foregroundColor(.white)
+                        }
+                    }
+                    
                 }
                 
             }
@@ -183,7 +181,7 @@ struct ContentView: View {
                     SafariView(url:URL(string: "http://192.168.0.1")!)
                 }
                 
-            }.frame(maxHeight: .infinity, alignment: .bottom)
+            }.frame(alignment: .bottom)
             
         }.padding()
         .frame(maxWidth: .infinity)
@@ -211,11 +209,14 @@ struct SafariView: UIViewControllerRepresentable {
 
 struct ConnectionHelpView: View {
     
-    
+    @State private var showSafariAppleCaptivePortalLogin = false
+    @State private var showSafariGoogleGenerate204Login = false
+    @State private var showSafariMSNCSILogin = false
+
     @Binding var showHelpView: Bool
     
     @Environment(\.openURL) private var openURL
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             
@@ -249,6 +250,62 @@ struct ConnectionHelpView: View {
                 }.padding()
                
                 VStack(alignment: .leading) {
+                    
+                    
+                    Text("다른 시도").font(.title2)
+                    
+                    // apple captive portal
+                    Button(action: {
+                        showSafariAppleCaptivePortalLogin = true
+                    })
+                    {
+                        Text("apple captive portal")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(Color.accentColor)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                    }
+                    .sheet(isPresented: $showSafariAppleCaptivePortalLogin) {
+                        SafariView(url:URL(string : "http://captive.apple.com")!)
+                    }
+                    
+                    // google generate 204
+                    Button(action: {
+                        showSafariGoogleGenerate204Login = true
+                    })
+                    {
+                        Text("google generate 204")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(Color.accentColor)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                    }
+                    .sheet(isPresented: $showSafariGoogleGenerate204Login) {
+                        SafariView(url:URL(string : "http://google.com/generate_204")!)
+                    }
+                    
+                    // ms ncsi
+                    Button(action: {
+                        showSafariMSNCSILogin = true
+                    })
+                    {
+                        Text("MS NCSI")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(Color.accentColor)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                    }
+                    .sheet(isPresented: $showSafariMSNCSILogin) {
+                        SafariView(url:URL(string : "http://www.msftncsi.com/ncsi.txt")!)
+                    }
+                    
+                    
+                }.padding()
+                
+                VStack(alignment: .leading) {
                     Text("기타").font(.title2)
                     
                     Button(action: {
@@ -262,20 +319,6 @@ struct ConnectionHelpView: View {
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color.white)
                             .background(Color.accentColor)
-                            .cornerRadius(8)
-                    }
-                    
-                    Button(action: {
-                        if let url = URL(string: "https://hanarotg.github.io/others/soongfi/"){
-                            openURL(url)
-                        }
-                    })
-                    {
-                        Text("홈페이지")
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .foregroundColor(Color.accentColor)
-                            .background(Color(.systemGray6))
                             .cornerRadius(8)
                     }
                     
